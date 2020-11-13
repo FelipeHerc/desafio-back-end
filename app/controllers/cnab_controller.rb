@@ -2,7 +2,7 @@
 
 class CnabController < ApplicationController
   def index
-    @cnab = Cnab.all
+    @cnabs = Cnab.all
   end
 
   def cadastrar
