@@ -1,6 +1,17 @@
-<%= form_with model: @cnab, local: true, multipart: true do |form| %>
-  <%= form.file_field :arquivo, class: "input" %>
-  <div class="mb-6">
-    <%= form.submit  class: "btn-default btn" %>
+<div class="mx-auto" style="width: 200px;">
+
+  <div class="card m-4" style="width: 18rem;">
+    <div class="card-body">
+      <%= form_with model: @cnab, local: true, multipart: true do |form| %>
+      <form>
+        <h5 class="card-title">Upload por arquivo</h5>
+        <div class="form-group">
+          <label for="uploadArquivo">Escolha um arquivo</label>
+          <%= form.file_field :arquivo, class: "form-control-file", id: "uploadArquivo" %>
+          <%= form.submit  class: "btn-dark btn mt-3" %>
+        </div>
+      </form>
+      <% end %>
+    </div>
   </div>
-<% end %>
+</div>
