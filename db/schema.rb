@@ -38,14 +38,13 @@ ActiveRecord::Schema.define(version: 2020_11_13_011915) do
 
   create_table "cnabs", force: :cascade do |t|
     t.bigint "tipo_id"
-    t.datetime "data"
+    t.string "data"
     t.integer "valor"
     t.string "cpf"
     t.string "cartao"
     t.string "hora"
     t.string "dono_loja"
     t.string "nome_loja"
-    t.string "name"
     t.index ["tipo_id"], name: "index_cnabs_on_tipo_id"
   end
 

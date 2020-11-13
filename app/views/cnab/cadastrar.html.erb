@@ -1,0 +1,6 @@
+<%= form_with model: @cnab, local: true, multipart: true do |form| %>
+  <%= form.file_field :arquivo, class: "input" %>
+  <div class="mb-6">
+    <%= form.submit  class: "btn-default btn" %>
+  </div>
+<% end %>
