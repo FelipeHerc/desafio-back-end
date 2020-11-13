@@ -5,6 +5,7 @@
       <th scope="col">Descrição</th>
       <th scope="col">Valor</th>
       <th scope="col">Cartão</th>
+      <th scope="col">Data</th>
       <th scope="col">Hora</th>
       <th scope="col">Dono da loja</th>
       <th scope="col">Nome da loja</th>
@@ -17,7 +18,8 @@
       <td><%= cnab.tipo.descricao %></td>
       <td><%= ActionController::Base.helpers.number_to_currency(cnab.valor, unit: "R$ ") %></td>
       <td><%= cnab.cartao %></td>
-      <td><%= cnab.hora %></td>
+      <td><%= cnab.data_hora.strftime('%d/%m/%Y') %></td>
+      <td><%= cnab.data_hora.strftime('%H:%M:%S') %></td>
       <td><%= cnab.dono_loja %></td>
       <td><%= cnab.nome_loja %></td>
     </tr>

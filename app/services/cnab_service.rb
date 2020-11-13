@@ -17,11 +17,10 @@ class CnabService
   def slice_cnab(cnab)
     {
       tipo_id: cnab[0].to_i,
-      data: cnab[1..8],
-      valor: cnab[9..18].to_i/100,
+      data_hora: DateTime.parse("#{cnab[1..8]}#{cnab[42..47]}"),
+      valor: cnab[9..18].to_f/100,
       cpf: cnab[19..29],
       cartao: cnab[30..41],
-      hora: cnab[42..47],
       dono_loja: cnab[48..61],
       nome_loja: cnab[62..80]
     }

@@ -1,0 +1,19 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Loja</th>
+      <th scope="col">Dono</th>
+      <th scope="col">Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @totais.each do |total| %>
+    <tr>
+      <td><%= total.last[:loja] %></td>
+      <td><%= total.last[:dono] %></td>
+      <td class="<%= total.last[:total].positive? ? 'table-success' : 'table-danger' %>"><%= ActionController::Base.helpers.number_to_currency(total.last[:total], unit: "R$ ")  %></td>
+    </tr>
+    <%end %>
+  </tbody>
+
+</table>
