@@ -8,7 +8,9 @@ ruby '2.5.8'
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
-
+gem 'bootstrap', '~> 4.0.0.alpha3'
+gem 'jquery-rails', '~> 4.4'
+gem 'autoprefixer-rails'
 gem 'public_suffix', '~> 1.5', '>= 1.5.3'
 gem 'addressable', '~> 2.4'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.4'
